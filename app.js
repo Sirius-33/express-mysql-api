@@ -1,6 +1,6 @@
 const express = require('express')
 var app = express();
-var formidable = require('formidable'); // package to make express understand data from forms
+const formidable = require('formidable'); // package to make express understand data from forms
 
 // To create an endpoint that looks something like this: https://localhost:1337/api/v1/whatever
 /* app.get("/api/v1/cheeses", function (req, res) {
@@ -29,7 +29,7 @@ app.post("/hello", function (request, response) {
 })
 
 // Our server
-app.listen(1337, function () {
+app.listen(3000, function () {
     console.log("Server started");
 });
 
