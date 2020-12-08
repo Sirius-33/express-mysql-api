@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/Sirius-33/express-mysql-api/issues"
   },
-  "homepage": "https://github.com/Sirius-33/express-mysql-api#readme"
+  "homepage": "https://github.com/Sirius-33/express-mysql-api#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "formidable": "^1.2.2",
+    "mysql2": "^2.2.5"
+  }
 }
