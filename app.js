@@ -1,12 +1,12 @@
 const express = require('express')
 var app = express();
-const formidable = require('formidable'); // package to make express understand data from forms
+const formidable = require('express-formidable'); // package to make express understand data from forms
 
 // To create an endpoint that looks something like this: https://localhost:1337/api/v1/whatever
 /* app.get("/api/v1/cheeses", function (req, res) {
 }) */
 
-app.use(formidable);
+app.use(formidable());
 
 // Routing: website.com/hello - goodbye
 app.get("/hello", function (request, response) {
@@ -29,7 +29,7 @@ app.post("/hello", function (request, response) {
 })
 
 // Our server
-app.listen(3000, function () {
+app.listen(1337, function () {
     console.log("Server started");
 });
 

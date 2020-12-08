@@ -19,7 +19,7 @@
   "homepage": "https://github.com/Sirius-33/express-mysql-api#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "formidable": "^1.2.2",
+    "express-formidable": "^1.2.0",
     "mysql2": "^2.2.5"
   }
 }
