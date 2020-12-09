@@ -3,10 +3,14 @@ var connection = require("./database");
 module.exports = function (app) {
     // Create a cheese
     app.post("/api/v1/cheeses", function (request, response) {
-        var sql = `INSERT INTO cheeses
+        /* var sql = `INSERT INTO cheeses
 							SET name = :name, price = :price, weight = :weight,
 							strength = (SELECT strengths.id FROM strengths WHERE name = :strength),
-							brand = (SELECT brands.id FROM brands WHERE name = :brand)`;
+                            brand = (SELECT brands.id FROM brands WHERE name = :brand)`; */
+                            
+        var sql = `INSERT INTO cheeses
+        (name, price, weight, strength, brand)
+        values (:name, :price, :weight, :strength, :brand)`;
 
         var placeholders = {
             name: request.fields.name,
@@ -71,7 +75,7 @@ module.exports = function (app) {
     });
 
     // GET a single cheese from ID
-    app.get("/api/v1/cheeses:id", function (request, response) {
+    app.get("/api/v1/cheeses/:id", function (request, response) {
         var sql = `SELECT cheeses.id, cheeses.name, cheeses.price, cheeses.weight,
 							 brands.name AS brand, strengths.name AS strength FROM cheeses
 							 INNER JOIN brands
