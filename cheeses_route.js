@@ -132,4 +132,9 @@ module.exports = function (app) {
             response.end();
         });
     });
+
+    // UPDATE/patch A Single Cheese
+    app.patch("/api/v1/cheeses/:id", function(request, response) {
+        
+    })
 };
